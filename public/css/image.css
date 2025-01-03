@@ -1,0 +1,25 @@
+.photo-frame {
+    padding: 10px;
+    border: 2px solid #333;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05);
+}

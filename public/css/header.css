@@ -1,0 +1,132 @@
+/* Header CSS*/
+.navbar{
+    min-width: 255px !important;
+  }
+
+.navbar-brand {
+    max-width: 65% !important;
+}
+
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    border-right: 1px solid orange !important;
+    padding-right: 20px !important;
+}
+
+.navbar-brand img {
+    height: 50px !important;
+    margin-right: 10px !important;
+}
+
+.navbar-brand p1 {
+    flex: 1 !important;
+    font-size: clamp(16px, 3vw, 24px) !important;
+    font-family: Arial Black, Arial, sans-serif !important;
+    color: orange !important;
+}
+.dropdown-menu{
+    padding: 0 0 !important;
+}
+
+.dropdown-menu .active{
+    background-color: orange !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    color: white !important;
+    border: whitesmoke !important;
+    text-decoration: none !important;
+    transition: background-color 0.3s, color 0.3s !important; /* Add transition for smooth effect */
+}
+
+.dropdown-menu .active:hover {
+    background-color:  #c82333 !important; /* Change background color on hover */
+    color: white !important; /* Change text color on hover */
+    text-decoration: none !important;
+    border: 1px solid  #c82333 !important;
+}
+
+.dropdown-item{
+    padding: .25rem 1.5rem !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+}
+
+.dropdown-divider {
+    margin: 0 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    border-top: 1px solid orange !important;
+}
+
+.btn{
+    font-family: 'Arial Black', Arial, sans-serif !important; 
+    font-size: 14px !important;
+    color: orange !important;
+    border: 1px solid orange !important;	
+    background-color: white !important;
+    margin-bottom: 10px !important;
+}
+
+.btn:hover{
+    font-family: 'Arial Black', Arial, sans-serif !important; 
+    font-size: 14px !important;
+    color: white !important;
+    background-color: orange !important;
+    border: 1px solid orange !important;
+}
+
+.btn-link{
+    color: rgba(255, 166, 0, 0.5); 
+    margin: 10px
+}
+
+.btn-link:hover{
+    color: orange !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-family: Arial Black, Arial, sans-serif !important;
+  color: rgba(255, 166, 0, 0.5) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color:orange !important;
+  }
+
+.navbar-light .navbar-nav .dropdown-toggle:hover, .navbar-light .navbar-nav .nav-link1:hover, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .active>.nav-link{
+    color: orange !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .home:hover{
+    color: rgba(255, 166, 0, 0.5) !important;
+}
+
+.dropdown-item{
+    border: 1px solid rgba(0, 0, 0, .125) !important;
+    color: orange !important;
+}
+
+.form-control{
+    border: 1px solid orange !important;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 166, 0, 0.5) !important; /* 浅橙色 */
+    font-family: Arial Black, Arial, sans-serif !important;
+}
+
+a, p, span{
+    font-family: Arial Black, Arial, sans-serif !important;
+}
+
+.list-group-item-action{
+    color: orange !important;
+}
+
+.avatar {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+}

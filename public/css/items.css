@@ -1,0 +1,200 @@
+.list-group .active{
+  background-color: orange !important;
+  color: white !important;
+  border: orange !important;
+  text-decoration: none !important;
+  transition: background-color 0.3s, color 0.3s !important; /* Add transition for smooth effect */
+}
+
+.list-group .active:hover {
+  background-color:  orange !important; /* Change background color on hover */
+  color: white !important; /* Change text color on hover */
+  text-decoration: none !important;
+  border: 1px solid  orange !important;
+}
+
+.col-md-4 .card{
+    height: 95% !important;
+    border: 1px solid orange !important;
+  }
+
+/* Media query for tablet-sized screens */
+@media (min-width: 768px) {
+    .card-body .h5 {
+      height: 75px !important;
+      overflow: hidden !important;
+    }
+}
+  
+@media (max-width: 768px) { 
+    .card-body .h5 {
+      /* Adjust the height for tablet screens */
+      height: 90px !important;
+      overflow: hidden !important;
+    }
+}
+
+
+.col-md-4 .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+.pet-title{
+    margin: auto !important;
+    font-family: Arial Black, Arial, sans-serif !important;
+    color: orange !important;
+}
+
+.pet-title2{
+  font-family: Arial Black, Arail, sans-serif !important;
+  color: orange !important;
+  font-size: 24px !important;
+  margin-top: 0PX !important;
+  margin-bottom: 5% !important;
+  border-bottom: 1px solid orange !important;
+}
+
+.card-heading{
+  font-family: Arial Black, Arail, sans-serif !important;
+  color: orange !important;
+  height: 3% !important;
+}
+
+.title1{
+    font-family: Arial Black, Arial, sans-serif !important;
+    font-size: 24px !important;
+    color: orange !important;
+    border-bottom: 3px solid orange !important;
+}
+
+.pet-img{
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+}
+
+.pet-img-v{
+  width: 20% !important;
+  height: 100% !important;
+  margin-bottom: 10px !important;
+  margin-right: 20px !important; /* 图片与信息之间的间距 */
+}
+
+.pet-content {
+  display: flex !important;
+  align-items: center !important; /* 垂直对齐 */
+}
+
+p, .adopt-title{
+  color: orange !important;
+}
+
+.adopt-title{
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important; /* Set the thickness of the underline */
+}
+
+.floating-button {
+  position: fixed !important;
+  bottom: 40px !important; /* Distance from the bottom of the page */
+  right: 40px !important;  /* Distance from the right side of the page */
+  width: 60px !important;
+  height: 60px !important;
+  background-color: orange !important; /* Button color */
+  color: white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  cursor: pointer !important;
+  text-decoration: none !important; /* Remove underline from link */
+  z-index: 1000 !important; /* Ensure it stays on top */
+}
+
+.floating-button:hover {
+  background-color: rgba(255, 68, 0, 0.755) !important; /* Darker shade on hover */
+  text-decoration: none !important; /* Remove underline from link */
+  color: white !important;
+}
+
+/* for the profile page */
+.card {
+  border: 1px solid orange !important;
+}
+
+.profile-card {
+  border-bottom: 1px solid orange !important;
+  border-image: linear-gradient(to right, orange, white, orange, white, orange) 1 !important;
+}
+
+.modal-content {
+  font-family: Arial Black, Arial, sans-serif !important;
+  color: orange !important;
+  width: 300px ;
+  padding: 20px !important;
+  border-radius: 5px !important;
+  position: relative !important;
+  margin: 50px auto !important;
+  border-bottom: 1px solid orange !important;
+  border-top: 1px solid orange !important;
+  border-image: linear-gradient(to right, orange, white, orange, white, orange) 1 !important;
+}
+
+.newUsername {
+  font-family: Arial Black, Arial, sans-serif !important;
+  color: orange !important;
+  border: 1px solid orange !important;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link {
+  /* color: #495057; */
+  color: #f8d2ab !important;
+}
+.nav-tabs .nav-link:hover{
+  color: orange !important;
+}
+.nav-tabs .nav-link.active {
+  font-weight: bold !important;
+  color: orange !important;
+}
+.badge {
+  margin-left: 5px !important;
+}
+.table td {
+  vertical-align: middle !important;
+}
+
+.words{
+  color: orange !important;
+  font-family: Arial Black, Arial, sans-serif !important;
+}
+
+.words2{
+  color: orange !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.title2{
+  color: white !important;
+  font-family: Arial Black, Arial, sans-serif !important;
+  font-size: 24px !important;
+  
+}
+

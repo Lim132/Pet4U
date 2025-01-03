@@ -1,0 +1,64 @@
+.card-header {
+    background-color: #FF8C00 !important;
+    color: white !important;
+    border-bottom: 1px solid #FFA500;
+}
+
+.table-responsive{
+    color: #FFA500 !important;
+    border-radius: 10px;
+}
+
+.table {
+    color: #FFA500 !important;
+}
+
+.table thead th {
+    background-color: #FFE4B5 !important;
+    color: #FF8C00 !important;
+    border-bottom: 2px solid #FFA500 !important;
+}
+
+.table td {
+    color: #FFA500 !important;
+    border-color: #FFE4B5 !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #FFF8DC !important;
+}
+
+.btn-primary {
+    background-color: #FF8C00 !important;
+    border-color: #FF8C00 !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #FFA500 !important;
+    border-color: #FFA500 !important;
+}
+
+.btn-primary i {
+    color: white !important;
+}
+
+/* 分页样式 */
+.pagination .page-link {
+    color: #FF8C00 !important;
+    border-color: #FFE4B5 !important;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FF8C00 !important;
+    border-color: #FF8C00 !important;
+    color: white !important;
+}
+
+.pagination .page-link:hover {
+    background-color: #FFE4B5 !important;
+}
+
+/* 文本颜色 */
+.text-center {
+    color: #FFA500 !important;
+}

@@ -1,0 +1,45 @@
+.animate-fly-in {
+    animation: flyInAnimation 1s forwards;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round';
+}
+  
+.fly-in {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    text-align: center; /* Center-align the text within the paragraph */
+}
+  
+.fly-in .red {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+  
+.fly-in .grey {
+    color: grey;
+    font-size: 20px;
+}
+
+/* Rest of the CSS... */
+
+@keyframes flyInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100%); /* Start position, translate it down 100% */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End position, translate it to its original position */
+    }
+}
+  
+/* Custom CSS styles */
+.card {
+    border: 1px solid red; /* Add a red color border */
+}
