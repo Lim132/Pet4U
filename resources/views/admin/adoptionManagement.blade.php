@@ -213,6 +213,14 @@
                                         <td>{{ $adoption->user->username }}</td>
                                     </tr>
                                     <tr>
+                                        <th>First Name:</th>
+                                        <td>{{ $adoption->user->firstName }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Last Name:</th>
+                                        <td>{{ $adoption->user->lastName }}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Email:</th>
                                         <td>{{ $adoption->user->email }}</td>
                                     </tr>
@@ -251,6 +259,13 @@
                                          class="rounded-circle" 
                                          style="width: 100px; height: 100px; object-fit: cover;"
                                          alt="User Avatar">
+                                </div>
+                            @else
+                                <div class="user-avatar mt-3 text-center">
+                                    <img src="{{ asset('images/image1.png') }}" 
+                                         class="rounded-circle" 
+                                         style="width: 100px; height: 100px; object-fit: cover;"
+                                         alt="Default Avatar">
                                 </div>
                             @endif
                         </div>

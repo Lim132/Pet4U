@@ -74,8 +74,8 @@
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item active" href="{{ route('myPets.index') }}">{{ __('My Pet') }}</a>
-                                    <a class="dropdown-item" href="{{ route('adoptions.application') }}">{{ __('Adoption Applications') }}</a>
-                                    <a class="dropdown-item" href="{{ route('pets.myAdded') }}">{{ __('Pets Added') }}</a>
+                                    <a class="dropdown-item" href="{{ route('adoptions.application') }}">{{ __('My Adoption Applications') }}</a>
+                                    <a class="dropdown-item" href="{{ route('pets.myAdded') }}">{{ __('My Pet Info Added') }}</a>
                                     @if(auth()->user()->role === 'admin')
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ route('admin.pets.verification') }}">{{ __('New Pet Verification') }}</a>
