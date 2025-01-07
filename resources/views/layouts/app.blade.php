@@ -7,6 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Favicon -->
+    <!-- 或者使用 PNG 格式 -->
+    <link rel="icon" type="image/jpg" sizes="180x180" href="{{ asset('images/logo.jpg') }}">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="{{ asset('images/logo.jpg') }}">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="{{ asset('images/logo.jpg') }}">
+
     <title>{{ config('app.name', 'Pet4U') }}</title>
 
     <!-- Fonts -->    
