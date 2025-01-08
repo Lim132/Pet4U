@@ -12,6 +12,7 @@ class MyPet extends Model
         'adoption_id',
         'pet_photos',
         'pet_name',
+        'pet_species',
         'pet_breed',
         'pet_gender',
         'pet_age',

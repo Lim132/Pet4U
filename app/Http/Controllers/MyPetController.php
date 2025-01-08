@@ -156,6 +156,7 @@ class MyPetController extends Controller
         // 验证请求数据
         $validated = $request->validate([
             'pet_name' => 'required|string|max:255',
+            'pet_species' => 'required|string|max:255',
             'pet_breed' => 'required|string|max:255',
             'pet_gender' => 'required|in:Male,Female',
             'pet_age' => 'required|numeric|min:0',

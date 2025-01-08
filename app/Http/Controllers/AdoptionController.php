@@ -510,6 +510,7 @@ class AdoptionController extends Controller
             'adoption_id' => $adoption->id,
             'pet_photos' => $petPhotos,
             'pet_name' => $adoption->pet->name,
+            'pet_species' => $adoption->pet->species,
             'pet_breed' => $adoption->pet->breed,
             'pet_gender' => $adoption->pet->gender,
             'pet_age' => $adoption->pet->age,

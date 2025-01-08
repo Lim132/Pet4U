@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('adoption_id')->constrained('adoptions')->onDelete('cascade');
             $table->json('pet_photos')->nullable();
             $table->string('pet_name');
+            $table->string('pet_species');
             $table->string('pet_breed');
             $table->string('pet_gender');
             $table->string('pet_age');
