@@ -9,7 +9,7 @@
             <h4>{{ __('Edit Pet Information') }}</h4>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('pets.update', $pet) }}" enctype="multipart/form-data">
+            <form method="POST" id="pet-edit-form" action="{{ route('pets.update', $pet) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 
@@ -315,11 +315,11 @@
                 const remainingPhotos = document.querySelectorAll('.photo-keep-input').length;
                 
                 if (remainingPhotos <= 1) {
-                    alert('至少需要保留一张照片！');
+                    alert('At least one photo must be kept!');
                     return;
                 }
                 
-                if (confirm('确定要删除这张照片吗？')) {
+                if (confirm('Are you sure you want to delete this photo?')) {
                     photoContainer.remove();
                 }
             });
@@ -329,7 +329,7 @@
         document.querySelectorAll('.delete-video').forEach(button => {
             button.addEventListener('click', function() {
                 const videoContainer = this.closest('.position-relative');
-                if (confirm('确定要删除这个视频吗？')) {
+                if (confirm('Are you sure you want to delete this video?')) {
                     videoContainer.remove();
                 }
             });
@@ -436,6 +436,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (elements.personality.select.value === 'other') {
         toggleOtherInput(elements.personality.select, elements.personality.other);
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 表单提交确认
+    const form = document.getElementById('pet-edit-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const isCustomer = {{ auth()->user()->role === 'customer' ? 'true' : 'false' }};
+            const confirmMessage = isCustomer 
+                ? '确认要更新宠物信息吗？更改需要管理员审核后才能生效。\nAre you sure you want to update this pet information? Changes will need administrator approval.'
+                : '确认要更新宠物信息吗？\nAre you sure you want to update this pet information?';
+            
+            if (confirm(confirmMessage)) {
+                this.submit();
+            }
+        });
     }
 });
 </script>

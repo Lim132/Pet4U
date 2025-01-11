@@ -210,6 +210,9 @@ class PetController extends Controller
             if (auth()->user()->role !== 'admin') {
                 abort(403, 'Unauthorized action.');
             }
+            if ($pet->verified) {
+                return redirect()->back()->with('error', 'This pet has already been verified and cannot be rejected.');
+            }
             // 删除相关的媒体文件
             if ($pet->photos) {
                 foreach ($pet->photos as $photo) {
@@ -299,7 +302,10 @@ class PetController extends Controller
     {
         // 验证权限
         if (auth()->user()->role === 'customer' && $pet->addedBy !== auth()->id()) {
-            return redirect()->back()->with('error', '您没有权限编辑此宠物信息。');
+            return redirect()->back()->with('error', 'You do not have permission to edit this pet information.');
+        }
+        if ($pet->verified) {
+            return redirect()->route('pets.myAdded')->with('error', 'This pet has already been verified and cannot be edited.');
         }
 
         // 验证请求数据
@@ -322,7 +328,7 @@ class PetController extends Controller
         // 处理保留的照片
         $photosToKeep = $request->input('photos_to_keep', []);
         if (empty($photosToKeep)) {
-            return redirect()->back()->with('error', '至少需要保留一张照片！');
+            return redirect()->back()->with('error', 'At least one photo must be kept!');
         }
 
         // 处理新上传的照片
@@ -413,6 +419,9 @@ class PetController extends Controller
         // 检查权限
         if (auth()->user()->role === 'customer' && $pet->addedBy !== auth()->id()) {
             return redirect()->back()->with('error', 'You do not have permission to edit this pet information.');
+        }
+        if ($pet->verified) {
+            return redirect()->back()->with('error', 'This pet has already been verified and cannot be edited.');
         }
 
         return view('common.petEdit', compact('pet'));

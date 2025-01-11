@@ -412,11 +412,10 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-success verify-btn">
                                     <i class="fas fa-check me-1"></i>Verify & Update
                                 </button>
-                                <button type="button" class="btn btn-danger" 
-                                    onclick="document.getElementById('rejectForm{{ $pet->id }}').submit();">
+                                <button type="button" class="btn btn-danger reject-btn">
                                     <i class="fas fa-times me-1"></i>Reject
                                 </button>
                             </div>
@@ -496,11 +495,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const remainingPhotos = document.querySelectorAll('.photo-keep-input').length;
             
             if (remainingPhotos <= 1) {
-                alert('至少需要保留一张照片！');
+                alert('Please keep at least one photo!');
                 return;
             }
             
-            if (confirm('确定要删除这张照片吗？')) {
+            if (confirm('Are you sure you want to delete this photo?')) {
                 photoContainer.remove();
             }
         });
@@ -510,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.delete-video').forEach(button => {
         button.addEventListener('click', function() {
             const videoContainer = this.closest('.position-relative');
-            if (confirm('确定要删除这个视频吗？')) {
+            if (confirm('Are you sure you want to delete this video?')) {
                 videoContainer.remove();
             }
         });
@@ -591,6 +590,26 @@ function setupModalHandlers(petId) {
             breedSelect.value = breedSelect.dataset.selectedBreed;
         }
     }
+
+    // 添加验证和拒绝按钮的确认处理
+    const verifyForm = modal.querySelector('form');
+    const rejectForm = document.getElementById(`rejectForm${petId}`);
+    
+    // 验证按钮确认
+    modal.querySelector('.verify-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (confirm('Are you sure you want to verify and update this pet information?')) {
+            verifyForm.submit();
+        }
+    });
+
+    // 拒绝按钮确认
+    modal.querySelector('.reject-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (confirm('Are you sure you want to reject this pet information? This action cannot be undone.')) {
+            rejectForm.submit();
+        }
+    });
 }
 
 // 切换"其他"输入框的显示/隐藏
