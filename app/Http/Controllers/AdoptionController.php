@@ -160,7 +160,7 @@ class AdoptionController extends Controller
             $query->where('status', $status);
         }
 
-        $adoptions = $query->latest()->paginate(10);
+        $adoptions = $query->latest()->paginate(6);
 
         // 获取各状态的数量
         $counts = [
